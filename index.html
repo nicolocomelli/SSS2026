@@ -54,6 +54,16 @@
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
+        <div id="message"></div>
     </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementbyId('username').value;
+            const msg = document.getElementById('message');
+            msg.style.color = "green";
+            msg.textContent = "Benvenuto, " + user + "! Login effettuato con successo.";
+        });
+    </script>
 </body>
 </html>
